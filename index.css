@@ -1,0 +1,288 @@
+@media screen and (max-width: 768px) {
+    .col-sm-4 {
+        text-align: center;
+        margin: 25px 0;
+    }
+}
+
+@font-face{
+  font-family: Futura Bold BT;
+  src: url(fonts/ufonts.com_futura-bold-bt.ttf);
+}
+
+@font-face {
+  font-family: Futura Medium;
+  src: url(fonts/Futura_Medium.ttf);
+}
+
+html, body{
+  margin: 0px;
+}
+
+/* NAVIGATION BAR */
+.navbar {
+    margin-bottom: 0;
+    background-color: #609f80;
+    z-index: 9999;
+    border: 0;
+    font-size: 2.5vmin !important;
+    line-height: 1.42857143 !important;
+    border-radius: 0;
+    font-family: Futura Bold BT;
+}
+
+.navbar li a, .navbar .navbar-brand {
+    color: #dfba47 !important;
+}
+
+.navbar-nav li a:hover, .navbar-nav li.active a {
+    color: #cfcb9c !important;
+    background-color: #4f8269 !important;
+}
+
+.navbar-default .navbar-toggle {
+    border-color: transparent;
+    color: #fff !important;
+}
+
+/* FRONT SECTION */
+.jumbotron{
+  background-color: #609f80;
+  padding: 75px 0px 25px;
+  margin: 0;
+}
+
+body .jumbotron p{
+  margin-bottom: 0px;
+  font-size: 30px;
+}
+
+.icon{
+  width: 50px;
+}
+
+div #id > img #front-design{
+  margin-bottom: 30px;
+  width:75% ;
+}
+
+#front h1{
+  color: #dfba47;
+  font-family: Futura Bold BT;
+  font-size: 8vmin;
+}
+
+p#short-desc{
+  color: #cfcb9c;
+  font-family: Futura Medium;
+  font-size: 4vmin;
+}
+
+.container-fluid{
+  padding: 50px;
+}
+
+/* ABOUT SECTION */
+
+#about{
+  background-color: #b6907b;
+  margin: 0;
+}
+
+h1#about-title{
+  font-size: 8vmin !important;
+  font-family: Futura Bold BT;
+  color: #af420a;
+}
+
+h2#about-subheading{
+  font-family: Futura Bold BT;
+  color: #af420a;
+  font-size: 5vmin;
+}
+
+.about-desc{
+  color: #af420a;
+  font-family: Futura Bold BT;
+  font-size: 5vmin;
+}
+
+img.about-logo{
+  width: 75%;
+  margin: 45px auto;
+}
+
+/* SKILLS SECTION */
+
+#skills{
+  background-color: #cbb345;
+  margin: 0;
+}
+
+.table{
+  border: none;
+}
+
+td{
+  text-align: center;
+}
+
+h1#skills-title{
+  font-size: 8vmin !important;
+  font-family: Futura Bold BT;
+  color: #4b574d;
+}
+
+h1#skills-group{
+  font-size: 5vmin !important;
+  font-family: Futura Bold BT;
+  color: #4b574d;
+}
+
+span.skill-lang{
+  color: #4b574d;
+  font-family: Futura Medium;
+  font-size: 4vmin;
+}
+
+div.img-align{
+  margin-left: 0px;
+}
+
+@media (max-width: 960px) {
+  div.middle-align{
+    margin-top: 0px;
+    padding-top: 0px;
+  }
+}
+
+@media (min-width:961px) {
+  div.middle-align{
+    margin-top: 10px;
+    padding-top: 10px;
+  }
+}
+
+
+
+.vcenter {
+    display: inline-block;
+    vertical-align: middle;
+    float: none;
+}
+
+img.line{
+  width: 80%;
+  margin: 5px;
+  margin-top: 0px;
+}
+
+img.stats{
+  width: 80%;
+}
+
+/* PROJECTS SECTION */
+
+#projects{
+  background-color: #af420a;
+  margin: 0;
+}
+
+h1#project-title{
+  font-size: 8vmin !important;
+  font-family: Futura Bold BT;
+  color: #cbb345;
+}
+
+h1#project-group{
+  font-size: 6vmin !important;
+  font-family: Futura Bold BT;
+  color: #cbb345;
+}
+
+p.project-desc{
+  font-size: 4vmin !important;
+  font-family: Futura Medium;
+  color: #cbb345;
+}
+
+img.car-proj{
+  width: 75%;
+}
+
+a.btn-site{
+  background-color: #cbb345;
+  border: none;
+  color: #af420a;
+}
+
+a.btn-site:hover{
+  color: #af420a;
+}
+
+hr{
+  border: 2px solid #333332;
+  opacity: 0.5;
+}
+
+/* CONTACT SECTION */
+h1#contact-title{
+  font-size: 8vmin !important;
+  font-family: Futura Bold BT;
+  color: #dfba47;
+}
+
+.icon-contact{
+  width: 50px;
+  padding: 15px;
+}
+
+.glyph-icons{
+  color: #dfba47;
+}
+
+p#contact-deets{
+  padding: 10px;
+  color: #cfcb9c;
+  font-family: Futura Medium;
+  font-size: 4vmin;
+}
+
+a.contact-icon{
+  color: #cfcb9c;
+}
+
+/* ANIMATION */
+.slideanim {visibility:hidden;}
+.slide {
+    /* The name of the animation */
+    animation-name: slide_left;
+    -webkit-animation-name: slide_left;
+    /* The duration of the animation */
+    animation-duration: 1s;
+    -webkit-animation-duration: 1s;
+    /* Make the element visible */
+    visibility: visible;
+}
+
+/* Go from 0% to 100% opacity (see-through) and specify the percentage from when to slide in the element along the Y-axis */
+@keyframes slide_left {
+    0% {
+        opacity: 0;
+        transform: translateX(-70%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0%);
+    }
+}
+@-webkit-keyframes slide_left {
+    0% {
+        opacity: 0;
+        -webkit-transform: translateX(-70%);
+    }
+    100% {
+        opacity: 1;
+        -webkit-transform: translateX(0%);
+    }
+}

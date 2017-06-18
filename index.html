@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Bianca Silmaro</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="js/bootstrap.min.js"></link>
+    <link rel="stylesheet" href="js/jquery-3.1.1.min.js"></link>
+    <link type="text/css" rel="stylesheet" href="index.css"></link>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="js/scripts.js"></link>
+
+    <script>
+      $(document).ready(function(){
+        // Add smooth scrolling to all links in navbar + footer link
+        $(".navbar a, footer a[href='#myPage']").on('click', function(event) {
+
+         // Make sure this.hash has a value before overriding default behavior
+        if (this.hash !== "") {
+
+          // Prevent default anchor click behavior
+          event.preventDefault();
+
+          // Store hash
+          var hash = this.hash;
+
+          // Using jQuery's animate() method to add smooth page scroll
+          // The optional number (900) specifies the number of milliseconds it takes to scroll to the specified area
+          $('html, body').animate({
+            scrollTop: $(hash).offset().top
+          }, 500, function(){
+
+            // Add hash (#) to URL when done scrolling (default click behavior)
+            window.location.hash = hash;
+            });
+          } // End if
+        });
+      })
+
+      //animation
+      $(window).scroll(function() {
+        $(".slideanim").each(function(){
+          var pos = $(this).offset().top;
+
+          var winTop = $(window).scrollTop();
+          if (pos < winTop + 600) {
+            $(this).addClass("slide");
+          }
+        });
+      });
+    </script>
+  </head>
+
+  <body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
+    <!-- NAVIGATION BAR -->
+    <nav class="navbar navbar-default navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">BCS</a>
+        </div>
+        <div class="collapse navbar-collapse" id="myNavbar">
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="#about">ABOUT</a></li>
+            <li><a href="#skills">SKILLS</a></li>
+            <li><a href="#projects">PROJECTS</a></li>
+            <li><a href="#contact">CONTACT</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- FRONT SECTION -->
+    <div class="jumbotron text-center" id="front">
+        <img class="img-responsive icon center-block" src="images/icon.png" alt="Bianca Silmaro" style="width:17%;">
+        <h1 id="name">BIANCA SILMARO</h1>
+        <p id="short-desc">Designer by day,<br>programmer by night</p>
+        <img class="front-design center-block" src="images/front-down.png" alt="Bianca Silmaro" style="width:90%; margin-top: 30px;">
+    </div>
+
+    <!-- ABOUT SECTION -->
+    <div class="container-fluid" id="about">
+      <h1 id="about-title">About</h1>
+      <h2 id="about-subheading">Things I'm very passionate about: </h2>
+      <div class="row text-center slideanim">
+        <div class="col-sm-4">
+          <img src="images/cars.png" class="img-responsive about-logo center-block">
+          <h2 class="about-desc">cars</h2>
+        </div>
+        <div class="col-sm-4">
+          <img src="images/movies.png" class="img-responsive about-logo center-block">
+          <h2 class="about-desc">movies</h2>
+        </div>
+        <div class="col-sm-4">
+          <img src="images/data.png" class="img-responsive about-logo center-block">
+          <h2 class="about-desc">data</h2>
+        </div>
+      </div>
+    </div>
+
+    <!-- SKILLS SECTION -->
+    <div class="container-fluid" id="skills">
+      <h1 id="skills-title">Skills</h1>
+      <h1 id="skills-group">Technical:</h1>
+      <div class="row">
+        <div class="col-xs-3">
+          <span class="skill-lang">&nbsp;</span>
+        </div>
+        <div class="col-xs-9">
+          <img src="images/line.png" class="img-responsive line">
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xs-3 middle-align">
+          <span class="skill-lang">HTML</span>
+        </div>
+        <div class="col-xs-9 slideanim img-align">
+          <img src="images/html.png" class="img-responsive stats">
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xs-3 middle-align">
+          <span class="skill-lang">CSS</span>
+        </div>
+        <div class="col-xs-9 slideanim">
+          <img src="images/css.png" class="img-responsive stats">
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xs-3 middle-align">
+          <span class="skill-lang">Javascript</span>
+        </div>
+        <div class="col-xs-9 slideanim">
+          <img src="images/javascript.png" class="img-responsive stats">
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xs-3 middle-align">
+          <span class="skill-lang">Python</span>
+        </div>
+        <div class="col-xs-9 slideanim">
+          <img src="images/python.png" class="img-responsive stats">
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xs-3 middle-align">
+          <span class="skill-lang">R</span>
+        </div>
+        <div class="col-xs-9 slideanim">
+          <img src="images/r.png" class="img-responsive stats">
+        </div>
+      </div>
+
+      <h1 id="skills-group">Design:</h1>
+      <div class="row">
+        <div class="col-xs-3">
+          <span class="skill-lang">&nbsp;</span>
+        </div>
+        <div class="col-xs-9">
+          <img src="images/line.png" class="img-responsive line">
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xs-3 middle-align">
+          <span class="skill-lang">Photoshop</span>
+        </div>
+        <div class="col-xs-9 slideanim">
+          <img src="images/photoshop.png" class="img-responsive stats">
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xs-3 middle-align">
+          <span class="skill-lang">Illustrator</span>
+        </div>
+        <div class="col-xs-9 slideanim">
+          <img src="images/illustrator.png" class="img-responsive stats">
+        </div>
+      </div>
+    </div>
+
+    <!-- PROJECTS SECTION -->
+    <div class="container-fluid" id="projects">
+      <h1 id="project-title">Projects</h1>
+      <div id="emr">
+        <h1 id="project-group">Electronic Medical Record</h1>
+        <p class="project-desc">an EMR for Gynecologic Oncology which creates, updates, and tracks patient records</p>
+        <a href="http://bit.ly/EMRGyneOnco" class="btn btn-lg btn-default btn-site">Go to site!</a>
+        <img src="images/emr.png" class="img-responsive car-proj center-block slideanim">
+      </div>
+      <hr>
+      <div id="bookishly">
+        <h1 id="project-group">Bookishly.</h1>
+        <p class="project-desc">an online book database and book store</p>
+        <a href="http://bit.ly/Bookishly" class="btn btn-default btn-lg btn-site">Go to site!</a>
+        <img src="images/bookishly.png" class="img-responsive car-proj center-block slideanim">
+      </div>
+      <hr>
+      <div id="wwtbam">
+        <h1 id="project-group">Who Wants to Be a Millionaire</h1>
+        <p class="project-desc">a web application that simulates the popular game 'Who Wants to Be a Millionaire'</p>
+        <img src="images/wwtbam.png" class="img-responsive car-proj center-block slideanim">
+      </div>
+    </div>
+
+    <!-- CONTACT SECTION -->
+    <div class="jumbotron text-center" id="contact">
+        <img class="img-responsive icon-contact center-block" src="images/icon.png" alt="Bianca Silmaro" style="width:17%;">
+        <p id="contact-deets"><span class="glyphicon glyphicon-envelope glyph-icons"></span> biancasilmaro@gmail.com</p>
+        <p id="contact-deets"><i class="fa fa-twitter glyph-icons"></i> <a class="contact-icon" href="http://twitter.com/binkymilk">@binkymilk</a></p>
+        <img class="front-design center-block" src="images/front-down.png" alt="Bianca Silmaro" style="width:90%; margin-top: 30px;">
+    </div>
+  </body>
+</html>
